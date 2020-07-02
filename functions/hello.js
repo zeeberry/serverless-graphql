@@ -19,11 +19,11 @@ exports.handler = async event => {
     return response;
   });
 
-  console.log('THE BODY', body);
+  console.log('THE BODY', JSON.stringify(body));
 
 
   return {
     statusCode: 200,
-    body: `Oh my gosh, Hello ${subject}!`,
+    body: `Oh my gosh, Hello ${subject}!
   }
 }
