@@ -9,10 +9,19 @@ exports.handler = async event => {
     }
 ` );
 
-  console.log('SCHEMA:', schema);
+  var root = {
+    hello: () => {
+      return 'Hello world!';
+    }
+  };
+
+  graphql(schema, '{ hello }', root).then((response) => {
+    console.log('MY RESPONSE', response);
+  });
+
 
   return {
     statusCode: 200,
-    body: `Oh, Hello ${subject}!`,
+    body: `Oh my, Hello ${subject}!`,
   }
 }
