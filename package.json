@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/zeeberry/serverless-graphql#readme",
   "devDependencies": {
+    "graphql": "^15.2.0",
     "netlify-lambda": "^1.6.3"
   }
 }
