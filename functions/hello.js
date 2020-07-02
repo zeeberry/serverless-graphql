@@ -24,6 +24,6 @@ exports.handler = async event => {
 
   return {
     statusCode: 200,
-    body: `Oh my gosh, Hello ${subject}!
+    body: `Oh my gosh, Hello ${subject}!`
   }
 }
