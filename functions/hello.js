@@ -16,10 +16,10 @@ exports.handler = async event => {
   };
   
   const body = await graphql(schema, '{ hello }', root).then((response) => {
-    return response;
+    return JSON.stringify(response);
   });
 
-  console.log('THE BODY', JSON.stringify(body));
+  console.log('THE BODY', body);
 
 
   return {
