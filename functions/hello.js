@@ -14,12 +14,9 @@ exports.handler = async event => {
       return 'Hello world!';
     }
   };
-
-  let body = "Hii";
-
-  graphql(schema, '{ hello }', root).then((response) => {
-    body = response;
-    console.log('THE BODY AFTER THEN', body);
+  
+  const body = await graphql(schema, '{ hello }', root).then((response) => {
+    return response;
   });
 
   console.log('THE BODY', body);
@@ -27,6 +24,6 @@ exports.handler = async event => {
 
   return {
     statusCode: 200,
-    body: `Oh my god, Hello ${subject}!`,
+    body: `Oh my gosh, Hello ${subject}!`,
   }
 }
