@@ -15,17 +15,18 @@ exports.handler = async event => {
     }
   };
 
-  let body;
+  let body = "Hii";
 
   graphql(schema, '{ hello }', root).then((response) => {
     body = response;
-    console.log('MY RESPONSE', response);
+    console.log('THE BODY AFTER THEN', body);
   });
+
+  console.log('THE BODY', body);
 
 
   return {
     statusCode: 200,
-    body: response;
-    //body: `Oh my, Hello ${subject}!`,
+    body: `Oh my god, Hello ${subject}!`,
   }
 }
