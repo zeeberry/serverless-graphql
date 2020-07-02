@@ -4,6 +4,8 @@
   "description": "a small graphql netlify function",
   "main": "index.js",
   "scripts": {
+    "dev": "netlify-lambda serve functions",
+    "build": "netlify-lambda build functions",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/zeeberry/serverless-graphql/issues"
   },
-  "homepage": "https://github.com/zeeberry/serverless-graphql#readme"
+  "homepage": "https://github.com/zeeberry/serverless-graphql#readme",
+  "devDependencies": {
+    "netlify-lambda": "^1.6.3"
+  }
 }
